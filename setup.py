@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 from typing import List
 
 def get_requirements_list()->List[str]:
@@ -15,7 +15,7 @@ VERSION = '0.1.0'
 AUTHOR = 'Sathish'
 AUTHOR_EMAIL = 'mail2sathish11@gmail.com'
 DESCRIPTION = 'Housing price prediction using machine learning'
-PACKAGES = ['housing']
+PACKAGES = find_packages() #['housing']
 
 
 setup(
