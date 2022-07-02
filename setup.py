@@ -1,6 +1,8 @@
 from setuptools import setup, find_packages
 from typing import List
 
+HYPHEN_E_DOT = "-e ."
+
 def get_requirements_list()->List[str]:
     """This function returns a list of packages from requirements.txt
 
@@ -8,7 +10,10 @@ def get_requirements_list()->List[str]:
         List[str]: List of the packages to be installed
     """
     with open('requirements.txt') as f:
-        return f.read().splitlines()
+        requirements_list = f.read().splitlines()
+        if HYPHEN_E_DOT in requirements_list:
+            requirements_list.remove(HYPHEN_E_DOT)
+        return requirements_list
 
 PROJECT_NAME = 'housing-price-predictor'
 VERSION = '0.1.0'
