@@ -2,11 +2,14 @@ import logging
 from datetime import datetime
 import os
 
-LOG_DIR="housing_logs"
+LOG_DIR="logs"
 
 CURRENT_TIME_STAMP=  f"{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}"
 
-LOG_FILE_NAME=f"log_{CURRENT_TIME_STAMP}.log"
+def get_log_file_name(current_time_stamp):
+    return f"log_{current_time_stamp}.log"
+
+LOG_FILE_NAME=get_log_file_name(current_time_stamp=CURRENT_TIME_STAMP)
 
 
 os.makedirs(LOG_DIR,exist_ok=True)
