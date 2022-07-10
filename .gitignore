@@ -130,3 +130,6 @@ dmypy.json
 
 # artifacts
 housing/artifact/
+
+# vscode
+.vscode/
