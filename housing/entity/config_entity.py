@@ -23,5 +23,5 @@ ModelPusherConfig = namedtuple("ModelPusherConfig", ["export_dir_path"])
 
 TrainingPipelineConfig = namedtuple("TrainingPipelineConfig", ["artifact_dir"])
 
-Experiment = namedtuple("Experiment",["experiment_id","initialization_timestamp","log_file_name",
-"running_status","start_time","stop_time","execution_time","message","experiment_file_path"])
+Experiment = namedtuple("Experiment",["experiment_id","initialization_timestamp","artifact_time_stamp",
+"running_status","start_time","stop_time","execution_time","message","experiment_file_path","accuracy","is_model_accepted"])
