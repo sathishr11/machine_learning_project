@@ -27,7 +27,7 @@ class ModelPusher:
             export_model_file_path = os.path.join(export_dir, model_file_name)
             logging.info(f"Exporting model file: [{export_model_file_path}]")
             os.makedirs(export_dir, exist_ok=True)
-
+            #we can call a function to save model to Azure blob storage/ google cloud strorage / s3 bucket
             shutil.copy(src=evaluated_model_file_path, dst=export_model_file_path)
             logging.info(
                 f"Trained model: {evaluated_model_file_path} is copied in export dir:[{export_model_file_path}]")
