@@ -130,6 +130,7 @@ dmypy.json
 
 # artifacts
 housing/artifact/
+saved_models/
 
 # vscode
 .vscode/
